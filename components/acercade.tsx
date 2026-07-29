@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import {
-  Animated,
-  Dimensions,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
+    Animated,
+    Dimensions,
+    ScrollView,
+    StatusBar,
+    StyleSheet,
+    Text,
+    View,
 } from 'react-native';
 import AchievementItem from '../components/AchievementItem';
 import PlayerCard from '../components/PlayerCard';
@@ -16,7 +16,7 @@ import { ACHIEVEMENTS, PLAYERS, TEAM_INFO } from '../constants/TeamData';
 
 const { width } = Dimensions.get('window');
 
-export default function HomeScreen() {
+export default function acercade() {
   const headerOpacity = useRef(new Animated.Value(0)).current;
   const contentTranslate = useRef(new Animated.Value(40)).current;
   const contentOpacity = useRef(new Animated.Value(0)).current;

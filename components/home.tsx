@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import {
-  Animated,
-  Dimensions,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
+    Animated,
+    Dimensions,
+    ScrollView,
+    StatusBar,
+    StyleSheet,
+    Text,
+    View,
 } from 'react-native';
 import AchievementItem from '../components/AchievementItem';
 import PlayerCard from '../components/PlayerCard';
