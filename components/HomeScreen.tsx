@@ -82,9 +82,8 @@ export default function HomeScreen() {
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Segundo Lugar</Text>
             <View style={styles.statsRow}>
-              <StatCard value={TEAM_INFO.founded} label="Fundación" accent="yellow" />
-              <StatCard value="4" label="Mundiales" accent="red" />
-              <StatCard value="33M" label="Hinchas" accent="yellow" />
+              <StatCard label="4" accent="red" />
+              <StatCard label="33M" accent="yellow" />
             </View>
           </View>
 
@@ -157,14 +156,12 @@ export default function HomeScreen() {
             </View>
             <Text style={styles.footerSub}>España</Text>
           </View>
-          <View style={styles.footer}>
-            <View style={styles.footerStripes}>
-              <View style={[styles.footerStripe, { backgroundColor: Colors.red }]} />
-              <View style={[styles.footerStripe, { backgroundColor: Colors.yellow }]} />
-              <View style={[styles.footerStripe, { backgroundColor: Colors.red }]} />
+            <View style={styles.section}>
+            <View style={styles.statsRow}>
+              <StatCard label="Home" accent="yellow" />
+              <StatCard label="España" accent="red" />
+              <StatCard label="Acerca De" accent="yellow" />
             </View>
-            <Text style={styles.footerSub}>España</Text>
-            
           </View>
         </Animated.View>
       </ScrollView>

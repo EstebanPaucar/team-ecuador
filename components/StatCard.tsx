@@ -3,12 +3,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../constants/Colors';
 
 interface StatCardProps {
-  value: string | number;
   label: string;
   accent?: 'red' | 'yellow' | 'red';
 }
 
-export default function StatCard({ value, label, accent = 'yellow' }: StatCardProps) {
+export default function StatCard({ label, accent = 'yellow' }: StatCardProps) {
   const accentColor =
     accent === 'yellow' ? Colors.yellow :
     accent === 'red' ? Colors.red :
@@ -16,7 +15,6 @@ export default function StatCard({ value, label, accent = 'yellow' }: StatCardPr
 
   return (
     <View style={[styles.card, { borderTopColor: accentColor }]}>
-      <Text style={[styles.value, { color: accentColor }]}>{value}</Text>
       <Text style={styles.label}>{label}</Text>
     </View>
   );
