@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
   },
   yearBadge: {
-    backgroundColor: Colors.blueDark,
+    backgroundColor: Colors.red,
     borderRadius: 8,
     paddingHorizontal: 8,
     paddingVertical: 4,

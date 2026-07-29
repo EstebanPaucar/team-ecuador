@@ -2,13 +2,13 @@ import React, { useEffect, useRef } from 'react';
 // Agrega este import al inicio del archivo, junto a los otros imports de react-native:
 
 import {
-    Animated,
-    Dimensions,
-    Image,
-    StatusBar,
-    StyleSheet,
-    Text,
-    View,
+  Animated,
+  Dimensions,
+  Image,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native';
 import { Colors } from '../constants/Colors';
 
@@ -87,7 +87,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
           // Navigate after delay
           setTimeout(() => {
             onFinish();
-          }, 2200);
+          }, 10000);
         });
       });
     });
@@ -123,7 +123,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
           ]}
         >
           <Image
-            source={require('../assets/images/logo-ecuador.png')}
+            source={require('../assets/images/logo-españa.png')}
             style={styles.logoImage}
             resizeMode="contain"
           />
@@ -140,22 +140,22 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
           ]}
         >
           <Animated.Text style={[styles.teamName, { opacity: shimmerOpacity }]}>
-            LA TRI
+            ESPAÑA
           </Animated.Text>
-          <Text style={styles.teamSubtitle}>Selección Ecuatoriana de Fútbol</Text>
+          <Text style={styles.teamSubtitle}>Bienvenido</Text>
           <View style={styles.divider}>
             <View style={styles.dividerLine} />
             <Text style={styles.dividerDot}>◆</Text>
             <View style={styles.dividerLine} />
           </View>
-          <Text style={styles.tagline}>Fuerza, Pasión y Garra</Text>
+          <Text style={styles.tagline}>Torneo de Selecciones 2026</Text>
         </Animated.View>
       </View>
 
       {/* Bottom flag stripe */}
       <View style={styles.bottomStripes}>
+        <View style={[styles.flagStripe, { backgroundColor: Colors.red }]} />
         <View style={[styles.flagStripe, { backgroundColor: Colors.yellow }]} />
-        <View style={[styles.flagStripe, { backgroundColor: Colors.blue }]} />
         <View style={[styles.flagStripe, { backgroundColor: Colors.red }]} />
       </View>
     </View>
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
     left: -width * 0.6,
     width: width * 0.8,
     height: height * 1.5,
-    backgroundColor: Colors.blue,
+    backgroundColor: Colors.yellow,
     transform: [{ rotate: '-15deg' }],
   },
   logoImage: {
@@ -189,8 +189,7 @@ const styles = StyleSheet.create({
     right: -width * 0.5,
     width: width * 0.7,
     height: height * 1.5,
-    backgroundColor: Colors.blueLight,
-    opacity: 0.4,
+    backgroundColor: Colors.yellow,
     transform: [{ rotate: '-15deg' }],
   },
   centerContent: {
@@ -257,7 +256,7 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     color: Colors.yellow,
     letterSpacing: 12,
-    textShadowColor: 'rgba(255,209,0,0.5)',
+    textShadowColor: 'rgba(241, 79, 29, 0.5)',
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 20,
   },

@@ -5,7 +5,7 @@ import { Colors } from '../constants/Colors';
 interface StatCardProps {
   value: string | number;
   label: string;
-  accent?: 'yellow' | 'blue' | 'red';
+  accent?: 'red' | 'yellow' | 'red';
 }
 
 export default function StatCard({ value, label, accent = 'yellow' }: StatCardProps) {

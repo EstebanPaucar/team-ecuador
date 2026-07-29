@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import {
-    Animated,
-    Dimensions,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    View,
+  Animated,
+  Dimensions,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native';
 import AchievementItem from '../components/AchievementItem';
 import PlayerCard from '../components/PlayerCard';
@@ -53,24 +53,17 @@ export default function HomeScreen() {
         <View style={styles.headerAccent} />
 
         <View style={styles.headerContent}>
-          <View style={styles.headerLeft}>
-            <Text style={styles.headerFlag}>🇪🇨</Text>
-          </View>
           <View style={styles.headerCenter}>
-            <Text style={styles.headerTitle}>LA TRI</Text>
-            <Text style={styles.headerSubtitle}>Selección de Ecuador</Text>
-          </View>
-          <View style={styles.rankingPill}>
-            <Text style={styles.rankingTop}>FIFA</Text>
-            <Text style={styles.rankingNum}>#{TEAM_INFO.fifaRanking}</Text>
+            <Text style={styles.headerTitle}>BIENVENIDO</Text>
+            <Text style={styles.headerSubtitle}>Esteban Paucar</Text>
           </View>
         </View>
 
         {/* Color stripes */}
         <View style={styles.stripes}>
           <View style={[styles.stripe, { backgroundColor: Colors.yellow, flex: 2 }]} />
-          <View style={[styles.stripe, { backgroundColor: Colors.blue, flex: 2 }]} />
-          <View style={[styles.stripe, { backgroundColor: Colors.red, flex: 1 }]} />
+          <View style={[styles.stripe, { backgroundColor: Colors.red, flex: 2 }]} />
+          <View style={[styles.stripe, { backgroundColor: Colors.yellow, flex: 1 }]} />
         </View>
       </Animated.View>
 
@@ -87,11 +80,11 @@ export default function HomeScreen() {
         >
           {/* Quick Stats */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>📊 En Números</Text>
+            <Text style={styles.sectionTitle}>Segundo Lugar</Text>
             <View style={styles.statsRow}>
-              <StatCard value={TEAM_INFO.founded} label="Fundación" accent="blue" />
-              <StatCard value="4" label="Mundiales" accent="yellow" />
-              <StatCard value="33M" label="Hinchas" accent="red" />
+              <StatCard value={TEAM_INFO.founded} label="Fundación" accent="yellow" />
+              <StatCard value="4" label="Mundiales" accent="red" />
+              <StatCard value="33M" label="Hinchas" accent="yellow" />
             </View>
           </View>
 
@@ -102,9 +95,6 @@ export default function HomeScreen() {
               {[
                 { label: 'DT', value: TEAM_INFO.coach, icon: '🎯' },
                 { label: 'Capitán', value: TEAM_INFO.captain, icon: '🏆' },
-                { label: 'Estadio', value: TEAM_INFO.stadium, icon: '🏟️' },
-                { label: 'Ciudad', value: TEAM_INFO.city, icon: '📍' },
-                { label: 'Confederación', value: TEAM_INFO.confederation, icon: '🌎' },
                 { label: 'Colores', value: TEAM_INFO.colors, icon: '🎨' },
               ].map((item, index) => (
                 <View
@@ -162,14 +152,11 @@ export default function HomeScreen() {
           {/* Footer */}
           <View style={styles.footer}>
             <View style={styles.footerStripes}>
+              <View style={[styles.footerStripe, { backgroundColor: Colors.red }]} />
               <View style={[styles.footerStripe, { backgroundColor: Colors.yellow }]} />
-              <View style={[styles.footerStripe, { backgroundColor: Colors.blue }]} />
               <View style={[styles.footerStripe, { backgroundColor: Colors.red }]} />
             </View>
-            <Text style={styles.footerText}>
-              {TEAM_INFO.federation}
-            </Text>
-            <Text style={styles.footerSub}>Siempre Arriba, Ecuador 🇪🇨</Text>
+            <Text style={styles.footerSub}>España</Text>
           </View>
         </Animated.View>
       </ScrollView>
@@ -177,13 +164,15 @@ export default function HomeScreen() {
   );
 }
 
+
+
 const styles = StyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: Colors.offWhite,
   },
   header: {
-    backgroundColor: Colors.blueDark,
+    backgroundColor: Colors.red,
     paddingTop: 54,
     paddingBottom: 0,
     overflow: 'hidden',
@@ -194,7 +183,7 @@ const styles = StyleSheet.create({
     right: -60,
     width: 200,
     height: 200,
-    backgroundColor: Colors.blue,
+    backgroundColor: Colors.red,
     borderRadius: 100,
     opacity: 0.4,
   },
@@ -221,7 +210,7 @@ const styles = StyleSheet.create({
     lineHeight: 36,
   },
   headerSubtitle: {
-    fontSize: 11,
+    fontSize: 20,
     color: Colors.white,
     opacity: 0.75,
     letterSpacing: 1.5,
@@ -314,7 +303,7 @@ const styles = StyleSheet.create({
   infoValue: {
     flex: 1,
     fontSize: 13,
-    color: Colors.blueDark,
+    color: Colors.red,
     fontWeight: '700',
     textAlign: 'right',
   },
@@ -327,7 +316,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
     borderRadius: 16,
     padding: 16,
-    shadowColor: Colors.blue,
+    shadowColor: Colors.red,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.08,
     shadowRadius: 12,
@@ -357,7 +346,7 @@ const styles = StyleSheet.create({
   },
   footerSub: {
     fontSize: 12,
-    color: Colors.blueDark,
+    color: Colors.red,
     fontWeight: '700',
     marginTop: 4,
     letterSpacing: 0.5,
