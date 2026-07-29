@@ -16,7 +16,7 @@ import { ACHIEVEMENTS, PLAYERS, TEAM_INFO } from '../constants/TeamData';
 
 const { width } = Dimensions.get('window');
 
-export default function HomeScreen() {
+export default function home() {
   const headerOpacity = useRef(new Animated.Value(0)).current;
   const contentTranslate = useRef(new Animated.Value(40)).current;
   const contentOpacity = useRef(new Animated.Value(0)).current;
