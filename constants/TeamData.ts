@@ -12,17 +12,15 @@ export const PLAYERS = [
     id: '1',
     name: 'Leonel Messi',
     position: 'Delantero',
-    number: 1,
-    club: 'Universitario (PER)',
-    emoji: '🧤',
+    number: 10,
+    emoji: '🛡️',
   },
   {
     id: '2',
-    name: 'Piero Hincapié',
-    position: 'Defensa',
-    number: 3,
-    club: 'Bayer Leverkusen (GER)',
-    emoji: '🛡️',
+    name: 'Juan Musso',
+    position: 'Arquero',
+    number: 1,
+    emoji: '🧤',
   },
 ];
 

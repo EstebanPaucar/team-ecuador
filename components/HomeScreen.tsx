@@ -126,7 +126,6 @@ export default function HomeScreen() {
                   name={player.name}
                   position={player.position}
                   number={player.number}
-                  club={player.club}
                   emoji={player.emoji}
                 />
               ))}
@@ -157,6 +156,15 @@ export default function HomeScreen() {
               <View style={[styles.footerStripe, { backgroundColor: Colors.red }]} />
             </View>
             <Text style={styles.footerSub}>España</Text>
+          </View>
+          <View style={styles.footer}>
+            <View style={styles.footerStripes}>
+              <View style={[styles.footerStripe, { backgroundColor: Colors.red }]} />
+              <View style={[styles.footerStripe, { backgroundColor: Colors.yellow }]} />
+              <View style={[styles.footerStripe, { backgroundColor: Colors.red }]} />
+            </View>
+            <Text style={styles.footerSub}>España</Text>
+            
           </View>
         </Animated.View>
       </ScrollView>

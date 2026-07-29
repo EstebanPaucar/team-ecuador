@@ -6,11 +6,10 @@ interface PlayerCardProps {
   name: string;
   position: string;
   number: number;
-  club: string;
   emoji: string;
 }
 
-export default function PlayerCard({ name, position, number, club, emoji }: PlayerCardProps) {
+export default function PlayerCard({ name, position, number, emoji }: PlayerCardProps) {
   const getPositionColor = (pos: string) => {
     if (pos === 'Portero') return Colors.yellow;
     if (pos === 'Defensa') return Colors.blue;
@@ -35,7 +34,6 @@ export default function PlayerCard({ name, position, number, club, emoji }: Play
         <View style={[styles.positionBadge, { borderColor: getPositionColor(position) }]}>
           <Text style={[styles.position, { color: getPositionColor(position) }]}>{position}</Text>
         </View>
-        <Text style={styles.club} numberOfLines={1}>{club}</Text>
       </View>
     </View>
   );
